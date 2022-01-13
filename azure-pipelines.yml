@@ -4,13 +4,13 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- master  ##if any code is pushed, the build will trigger
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: ubuntu-latest    ##agent that will run our jobs ##macOS-latest  ##windows-latest
 
-steps:
-- task: ArchiveFiles@2
+steps: ##
+- task: ArchiveFiles@2  
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
